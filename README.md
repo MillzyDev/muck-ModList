@@ -1,4 +1,19 @@
 # Muck ModList
-### Adds a menu to show you all loaded mods
+Adds a menu to show you all loaded mods and any ChainLoader errors
 
-![image](https://user-images.githubusercontent.com/64277238/155372739-b806445f-a1ee-4239-bdba-a592eb8ff7b4.png)
+## Instructions
+Press the `Mods` button on the Main Menu
+For viewing ChainLoader errors navigate from the ModListMenu to the ChainLoader Errors menu by pressing the `CL Errors (x)` button, in the top right corner.
+
+## Changelogs
+
+# 1.1.0 (UI Overhaul)
+- New SPICY UI
+- Reads mod manifests rather than mod metadata
+- View mod description
+- View mod website
+- View mod dependencies
+- ChainLoader Errors menu
+
+# 1.0.0 (Release)
+- Small simple menu for viewing the IDs of loaded plugins
