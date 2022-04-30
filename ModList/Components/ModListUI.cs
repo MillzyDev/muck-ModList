@@ -118,18 +118,23 @@ namespace ModList.Components
             ModListView = transform.Find("ModListView").gameObject;
 
             MainBackButton = ModListView.transform.Find("BackButton").GetComponent<Button>();
+            MainBackButton.gameObject.AddComponent<ButtonSfx>();
             ErrorsButton = ModListView.transform.Find("ErrorsButton").GetComponent<Button>();
+            ErrorsButton.gameObject.AddComponent<ButtonSfx>();
 
             Transform viewBackground = ModListView.transform.Find("ModListViewBackground");
 
             Title = viewBackground.Find("ModListTitle").GetComponent<TextMeshProUGUI>();
 
             Transform pluginList = viewBackground.Find("PluginList");
+            pluginList.GetComponent<ScrollRect>().scrollSensitivity = 30f;
+
             Transform pluginViewport = pluginList.Find("Viewport");
 
             PluginListContent = pluginViewport.Find("Content").gameObject;
 
             PluginButtonPrefab = PluginListContent.transform.Find("PluginButton").gameObject;
+            PluginButtonPrefab.AddComponent<ButtonSfx>();
             PluginButtonPrefab.SetActive(false);
 
             Transform infoContainer = viewBackground.Find("ModInfoContainer");
@@ -154,6 +159,8 @@ namespace ModList.Components
             ErrorsView = transform.Find("ErrorView").gameObject;
 
             Transform errorList = ErrorsView.transform.Find("ErrorList");
+            errorList.GetComponent<ScrollRect>().scrollSensitivity = 30f;
+
             Transform errorViewport = errorList.Find("Viewport");
 
             ErrorListContent = errorViewport.Find("Content").gameObject;
@@ -161,6 +168,7 @@ namespace ModList.Components
             ErrorPrefab.SetActive(false);
 
             ErrorsBackButton = ErrorsView.transform.Find("BackButton").GetComponent<Button>();
+            ErrorsBackButton.gameObject.AddComponent<ButtonSfx>();
 
             ErrorsView.SetActive(false);
 
