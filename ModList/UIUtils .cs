@@ -10,9 +10,11 @@ namespace ModList
         {
             GameObject prefab = GameObject.Find(template);
 
-            GameObject buttonObj = UnityEngine.Object.Instantiate(prefab);
+            GameObject buttonObj = Object.Instantiate(prefab);
             buttonObj.name = "ModListButton";
             buttonObj.transform.SetParent(parent);
+
+            //buttonObj.AddComponent<ButtonSfx>();
 
             var modListText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             modListText.text = text;
