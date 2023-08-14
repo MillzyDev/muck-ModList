@@ -1,4 +1,0 @@
-﻿dotnet build ModList.csproj
-Copy-Item "C:\Users\USER\Documents\GitHub\muck-ModList\ModList\bin\Debug\net472\dev.Millzy.Muck.ModList.dll" -Destination "C:\Users\USER\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Muck\profiles\Default\BepInEx\plugins"
-Copy-Item "C:\Users\USER\Documents\GitHub\muck-ModList\ModList\bin\Debug\net472\Newtonsoft.Json.dll" -Destination "C:\Users\USER\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Muck\profiles\Default\BepInEx\plugins"
-Copy-Item "C:\Users\USER\Documents\GitHub\muck-ModList\ModList\bin\Debug\net472\dev.Millzy.Muck.ModList.pdb" -Destination "C:\Users\USER\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Muck\profiles\Default\BepInEx\plugins"

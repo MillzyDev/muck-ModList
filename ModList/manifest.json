@@ -1,7 +1,0 @@
-{
-    "name": "ModList",
-    "version_number": "1.1.1",
-    "website_url": "https://github.com/MillzyDev/muck-ModList",
-    "description": "Adds a menu to show you all plugins/mods that are loaded",
-    "dependencies": []
-}
