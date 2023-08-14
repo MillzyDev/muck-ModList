@@ -1,0 +1,14 @@
+﻿<Project>
+    <PropertyGroup>
+        <ModName>$(RootNamespace)</ModName>
+        <ModAuthor>Millzy</ModAuthor>
+        <ModVersion>2.0.0</ModVersion>
+        <ModDescription>Adds a menu to show you all plugins/mods that are loaded, as well as any errors.</ModDescription>
+        <ModId>dev.millzy.$(ModName)</ModId>
+        <ModWebsiteUrl>https://github.com/MillzyDev/muck-ModList</ModWebsiteUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ModDependencies Include="LavaGang-MelonLoader-0.5.7" />
+    </ItemGroup>
+</Project> 
