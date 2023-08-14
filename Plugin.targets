@@ -45,13 +45,13 @@ namespace $(RootNamespace)
 
     <Target Name="AutoInstall" AfterTargets="PostBuildEvent">
         <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll;$(OutputPath)\$(AssemblyName).pdb"
-              DestinationFolder="$(GameDir)\Mods" />
+              DestinationFolder="$(GameDir)\BepInEx\plugins\" />
 
         <Copy SourceFiles="$(OutputPath)\$(AssemblyName).xml"
-              DestinationFolder="$(GameDir)\Mods"
+              DestinationFolder="$(GameDir)\BepInEx\plugins\"
               Condition="Exists('$(OutputPath)\$(AssemblyName).xml')" />
 
-        <Message Text="Finished copying files to $(GameDir)\Mods\"
+        <Message Text="Finished copying files to $(GameDir)\BepInEx\plugins\"
                  Importance="high" />
     </Target>
 
@@ -84,7 +84,7 @@ namespace $(RootNamespace)
                  Importance="high" />
 
         <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll"
-              DestinationFolder="$(OutputPath)\StagingArea\Mods\" />
+              DestinationFolder="$(OutputPath)\StagingArea\BepInEx\plugins\" />
 
         <Message Text="Finished staging mod files."
                  Importance="high" />
