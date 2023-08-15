@@ -11,6 +11,7 @@ namespace ModList
         private const string _osxBundle = "ModList.Resources.modlist-osx.bundle";
         private const string _linuxBundle = "ModList.Resources.modlist-linux.bundle";
         
+        // grrrrrr
         private static readonly Lazy<UiLoader> s_lazy = new(() => new UiLoader());
 
         private AssetBundle? _assetBundle;
@@ -30,7 +31,7 @@ namespace ModList
 
             // ReSharper disable once SwitchExpressionHandlesSomeKnownEnumValuesWithExceptionInDefault
             string bundleName = platform switch
-            {
+            { // i prefer this approach, rather than using isOSVersion or whatever
                 PlatformID.Win32NT => _winBundle,
                 PlatformID.MacOSX => _osxBundle,
                 PlatformID.Unix => _linuxBundle,
