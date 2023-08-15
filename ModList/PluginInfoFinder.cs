@@ -45,7 +45,7 @@ namespace ModList
                 ModListPlugin pluginInfo = new()
                 {
                     Name = metadata.Name,
-                    Description = info.Location,
+                    Description = Path.GetFileName(info.Location), // just makes it a bit shorter
                     Version = metadata.Version.ToString(),
                     Dependencies = string.Join(", ",
                         info.Dependencies.Select(dependency => dependency.DependencyGUID)),
