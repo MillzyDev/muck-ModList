@@ -1,4 +1,4 @@
-﻿# ModList
+# ModList
 
 [![](https://img.shields.io/badge/Source-ModList-informational?style=for-the-badge&logo=GitHub)](https://github.com/MillzyDev/muck-ModList)
 [![](https://img.shields.io/github/v/release/MillzyDev/muck-ModList?style=for-the-badge)](https://github.com/MillzyDev/muck-ModList/releases/latest)
