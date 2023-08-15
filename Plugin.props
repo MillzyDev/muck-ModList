@@ -9,6 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ModDependencies Include="LavaGang-MelonLoader-0.5.7" />
+        <ModDependencies Include="BepInEx-BepInExPack_Muck-5.4.1101" />
     </ItemGroup>
 </Project> 
