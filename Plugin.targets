@@ -92,7 +92,8 @@ namespace $(RootNamespace)
         <MakeDir Directories="$(OutputPath)\Thunderstore" />
 
         <ZipDirectory DestinationFile="$(OutputPath)\Thunderstore\$(AssemblyName).zip"
-                      SourceDirectory="$(OutputPath)\StagingArea\" />
+                      SourceDirectory="$(OutputPath)\StagingArea\" 
+                      Overwrite="true" />
 
         <Message Text="Created thunderstore package ($(AssemblyName).zip) at $(OutputPath)\Thunderstore\"
                  Importance="high" />
