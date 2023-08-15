@@ -1,7 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using UnityEngine;
 
 namespace ModList
 {
@@ -22,7 +21,6 @@ namespace ModList
         private void Start()
         {
             UiLoader.Instance.LoadUiAssetBundle();
-            
             _harmony.PatchAll();
         }
     }
