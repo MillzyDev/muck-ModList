@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using BepInEx.Bootstrap;
 using TMPro;
 using UnityEngine;
@@ -50,6 +51,8 @@ namespace ModList
                 });
 
                 errorsButton.text = "Errors (" + Chainloader.DependencyErrors.Count + ")";
+                
+                content.GetComponentsInChildren<Button>().First().onClick.Invoke(); // press button to display stuff
             }
         }
     }
