@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using BepInEx;
 using BepInEx.Bootstrap;
 using TMPro;
 using UnityEngine;
@@ -14,11 +13,13 @@ namespace ModList
         public TextMeshProUGUI nameText = null!;
         public TextMeshProUGUI versionText = null!;
         public ClickableTextMeshProUGUILink websiteText = null!;
+        public TextMeshProUGUI descriptionText = null!;
         public TextMeshProUGUI dependenciesText = null!;
+        public TextMeshProUGUI errorsButton = null!;
 
         private void Start()
         {
-            Transform content = transform.Find("Viewport/Content");
+            RectTransform content = GetComponent<ScrollRect>().content;
 
             IEnumerable<ModListPlugin> plugins = PluginInfoFinder.GetInfo();
 
@@ -44,9 +45,11 @@ namespace ModList
                         ? "(none)"
                         : "Website (" + new Uri(websiteUrl).Host + ")";
                     websiteText.Url = websiteUrl;
-                    
+                    descriptionText.text = plugin.Description;
                     dependenciesText.text = dependencies.Length == 0 ? "(none)" : dependencies;
                 });
+
+                errorsButton.text = "Errors (" + Chainloader.DependencyErrors.Count + ")";
             }
         }
     }

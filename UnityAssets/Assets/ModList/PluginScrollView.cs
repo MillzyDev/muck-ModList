@@ -11,6 +11,8 @@ namespace ModList
         public TextMeshProUGUI nameText;
         public TextMeshProUGUI versionText;
         public ClickableTextMeshProUGUILink websiteText;
+        public TextMeshProUGUI descriptionText;
         public TextMeshProUGUI dependenciesText;
+        public TextMeshProUGUI errorsButton;
     }
 }
