@@ -78,7 +78,7 @@ namespace ModList
             }
             catch (Exception e)
             {
-                Plugin.Log.LogInfo(e.StackTrace);
+                Plugin.Log.LogWarning(e);
             }
 
             manifestPath = "";
