@@ -44,7 +44,7 @@ namespace $(RootNamespace)
     -->
 
     <Target Name="AutoInstall" AfterTargets="PostBuildEvent">
-        <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll;$(OutputPath)\$(AssemblyName).pdb"
+        <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll;$(OutputPath)\$(AssemblyName).pdb;$(OutputPath)\Newtonsoft.Json.dll"
               DestinationFolder="$(GameDir)\BepInEx\plugins\" />
 
         <Copy SourceFiles="$(OutputPath)\$(AssemblyName).xml"
@@ -83,7 +83,7 @@ namespace $(RootNamespace)
         <Message Text="Finised copying Thunderstore recognised files."
                  Importance="high" />
 
-        <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll"
+        <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll;$(OutputPath)\Newtonsoft.Json.dll"
               DestinationFolder="$(OutputPath)\StagingArea\BepInEx\plugins\" />
 
         <Message Text="Finished staging mod files."
